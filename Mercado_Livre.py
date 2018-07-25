@@ -96,9 +96,6 @@ def Main():
             print('\n')
             csv_writer.writerow([name_item,price_item+','+price_d_item,cc_price,interest,delivery,sales_2[0],sales_2[1],link])
 
-    count = str(count)
-    print('Foram extraídos '+count+' anúncios.')
+    print('Foram extraídos '+str(count)+' anúncios.')
     csv_file.close
 Main()
- 
-
