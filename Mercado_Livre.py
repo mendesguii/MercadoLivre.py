@@ -16,7 +16,7 @@ def user_input():
 
 def page_number():
     num_loop = int(input('Digite o número de Páginas: '))
-    while num_loop > 5:
+    while num_loop > 6:
         num_loop = int(input('Digite o número de Páginas: '))
     return num_loop
 
