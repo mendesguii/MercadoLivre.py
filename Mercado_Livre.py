@@ -3,7 +3,6 @@
 from bs4 import BeautifulSoup
 import requests
 import csv
-import re
 
 #Abre o arquivo
 csv_file = open('data.csv','a',newline='')
