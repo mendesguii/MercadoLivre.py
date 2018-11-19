@@ -5,7 +5,7 @@ import requests
 import csv
 
 #Abre o arquivo
-csv_file = open('data.csv','a',newline='')
+csv_file = open('data.csv','a',newline='',encoding='utf_8_sig')
 csv_writer=csv.writer(csv_file)
 csv_writer.writerow(['Anúncio','Preço','Parcela','Juros','Frete','Vendas','Localização','Link'])
 
