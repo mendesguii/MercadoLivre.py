@@ -27,11 +27,11 @@ def Main():
     num_loop= page_number()
     pages_increment = ['0','49','101','151','202','253']
     for x in range(0,num_loop):
-
+        
         source = requests.get('https://lista.mercadolivre.com.br/'+usr_input+'_Desde_'+pages_increment[x]+'_DisplayType_LF').text
         soup = BeautifulSoup(source,"html5lib")
 
-        for item_shop in soup.find_all('li', class_="results-item article stack "):
+        for item_shop in soup.find_all('li', class_="results-item article stack product "):
             name_item = item_shop.find('span',class_="main-title").text
             price_item = item_shop.find('span',class_="price__fraction").text
             link = item_shop.find('a',class_="item__info-title")['href']
