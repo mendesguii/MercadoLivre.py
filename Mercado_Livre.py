@@ -16,7 +16,7 @@ def user_input():
 
 def page_number():
     num_loop = int(input('Digite o número de Páginas: '))
-    while num_loop > 6:
+    while num_loop > 8:
         num_loop = int(input('Digite o número de Páginas: '))
     return num_loop
 
@@ -25,7 +25,7 @@ def Main():
     count = 0
     usr_input = user_input()
     num_loop= page_number()
-    pages_increment = ['0','49','101','151','202','253']
+    pages_increment = ['0','49','101','151','202','253','304','355']
     for x in range(0,num_loop):
         
         source = requests.get('https://lista.mercadolivre.com.br/'+usr_input+'_Desde_'+pages_increment[x]+'_DisplayType_LF').text
