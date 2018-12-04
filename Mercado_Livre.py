@@ -25,13 +25,14 @@ def Main():
     count = 0
     usr_input = user_input()
     num_loop= page_number()
-    pages_increment = ['0','49','101','151','202','253','304','355']
+    pages_increment = ['0','51','101','151','201','252','303','358']
+    search_div=['results-item article stack ','results-item article stack product ','results-item article article-pad stack product ','results-item article article-pad stack ']
     for x in range(0,num_loop):
         
         source = requests.get('https://lista.mercadolivre.com.br/'+usr_input+'_Desde_'+pages_increment[x]+'_DisplayType_LF').text
         soup = BeautifulSoup(source,"html5lib")
 
-        for item_shop in soup.find_all('li', class_="results-item article stack product "):
+        for item_shop in soup.find_all('li', class_=search_div):
             name_item = item_shop.find('span',class_="main-title").text
             price_item = item_shop.find('span',class_="price__fraction").text
             link = item_shop.find('a',class_="item__info-title")['href']
