@@ -26,7 +26,7 @@ def Main():
     usr_input = user_input()
     num_loop= page_number()
     pages_increment = ['0','51','101','151','201','252','303','358']
-    search_div=['results-item article stack ','results-item article stack product ','results-item article article-pad stack product ','results-item article article-pad stack ']
+    search_div=['results-item article stack ','results-item article stack product ','results-item article article-pad stack product ','results-item article article-pad stack ','results-item']
     for x in range(0,num_loop):
         
         source = requests.get('https://lista.mercadolivre.com.br/'+usr_input+'_Desde_'+pages_increment[x]+'_DisplayType_LF').text
