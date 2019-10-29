@@ -1,5 +1,4 @@
 # Scraper para o Mercado Livre
-==============================
 
 ## Dependências
 * beautifulsoup4
